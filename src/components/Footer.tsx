@@ -178,14 +178,9 @@ const Footer = () => {
           <div className="border-t border-neutral-700/50 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-neutral-400 text-sm">
-                © 2024 Çankaya Blockchain Topluluğu. Tüm hakları saklıdır.
+                © 2025 Çankaya Blockchain Topluluğu. Tüm hakları saklıdır.
               </div>
               <div className="flex items-center space-x-4">
-                <div className="flex items-center text-neutral-400 text-sm">
-                  <span>Ankara'dan </span>
-                  <Heart size={16} className="mx-1 text-red-500 animate-pulse" />
-                  <span> ile yapıldı</span>
-                </div>
                 <button
                   onClick={scrollToTop}
                   className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary-600 to-secondary-600 flex items-center justify-center hover:from-primary-700 hover:to-secondary-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 group"

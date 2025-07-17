@@ -1,4 +1,4 @@
-import { Calendar, Users, Sparkles, Trophy, Star, BookOpen, TrendingUp, Award, X, ChevronLeft, ChevronRight, Image, ExternalLink, Play, Clock, MapPin, ArrowRight, ArrowLeft, Globe, Zap, Target, Lightbulb, Shield, Rocket, Heart, Briefcase, GraduationCap, Presentation, Building, Megaphone, Code, Database, Network, Cpu, Wallet, Coins, BarChart3, Users2, Globe2, Monitor, Smartphone, Tablet, Server, Cloud, Lock, Unlock, Key, Eye, EyeOff, CheckCircle, AlertCircle, Info, HelpCircle, Settings, Wrench, Palette, Music, Video, Camera, FileText, Folder, Archive, Download, Upload, Share, Link, Mail, Phone, MessageCircle, MessageSquare, Send, Paperclip, Smile, ThumbsUp, ThumbsDown, Flag, Bell, Search, Filter, SortAsc, SortDesc, Grid, List, Menu, MoreHorizontal, MoreVertical, Plus, Minus, Edit, Trash2, Copy, Save, RefreshCw, RotateCcw, RotateCw, ZoomIn, ZoomOut, Maximize, Minimize, Move, Crop, Scissors, Type, Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight, Hash, AtSign, DollarSign, Percent, Sun, Coffee, PartyPopper } from 'lucide-react'
+import { Calendar, Users, Sparkles, Trophy, Star, BookOpen, TrendingUp, Award, X, ChevronLeft, ChevronRight, Image, ExternalLink, Play, Clock, MapPin, ArrowRight, ArrowLeft, ChevronDown, ChevronUp, Globe, Zap, Target, Lightbulb, Shield, Rocket, Heart, Briefcase, GraduationCap, Presentation, Building, Megaphone, Code, Database, Network, Cpu, Wallet, Coins, BarChart3, Users2, Globe2, Monitor, Smartphone, Tablet, Server, Cloud, Lock, Unlock, Key, Eye, EyeOff, CheckCircle, AlertCircle, Info, HelpCircle, Settings, Wrench, Palette, Music, Video, Camera, FileText, Folder, Archive, Download, Upload, Share, Link, Mail, Phone, MessageCircle, MessageSquare, Send, Paperclip, Smile, ThumbsUp, ThumbsDown, Flag, Bell, Search, Filter, SortAsc, SortDesc, Grid, List, Menu, MoreHorizontal, MoreVertical, Plus, Minus, Edit, Trash2, Copy, Save, RefreshCw, RotateCcw, RotateCw, ZoomIn, ZoomOut, Maximize, Minimize, Move, Crop, Scissors, Type, Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight, Hash, AtSign, DollarSign, Percent, Sun, Coffee, PartyPopper } from 'lucide-react'
 import { useState } from 'react'
 import ibw1 from '../assets/ıbw1.jpeg'
 import ibw2 from '../assets/ıbw2.jpeg'
@@ -67,6 +67,7 @@ import bybıt3 from '../assets/bybıt3.jpeg'
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState<number | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [showAllEvents, setShowAllEvents] = useState(false)
 
   const events = [
     {
@@ -573,7 +574,7 @@ const Events = () => {
     if (b.title === "Istanbul Blockchain Week 2025") return 1;
     
     // Diğer etkinlikleri yıl bilgisine göre büyükten küçüğe sırala
-    const getYear = (e) => parseInt((e.year || '').match(/\d{4}/)?.[0] || '0', 10);
+    const getYear = (e: any) => parseInt((e.year || '').match(/\d{4}/)?.[0] || '0', 10);
     return getYear(b) - getYear(a);
   });
 
@@ -621,6 +622,13 @@ const Events = () => {
       )
     }
   }
+
+  const toggleShowAllEvents = () => {
+    setShowAllEvents(!showAllEvents)
+  }
+
+  // İlk 6 etkinliği göster, geri kalanını "Daha Fazla" butonu ile
+  const displayedEvents = showAllEvents ? events : events.slice(0, 6)
 
 
 
@@ -766,7 +774,7 @@ const Events = () => {
         {/* Events Grid */}
         <div className="max-w-7xl mx-auto mb-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {events.map((event, index) => (
+              {displayedEvents.map((event, index) => (
                 <div 
                   key={index} 
                 className="group cursor-pointer animate-fade-in-up hover:animate-pulse"
@@ -867,6 +875,60 @@ const Events = () => {
                 </div>
               ))}
             </div>
+            
+            {/* Daha Fazla Butonu */}
+            {!showAllEvents && events.length > 6 && (
+              <div className="flex justify-center mt-12">
+                <button
+                  onClick={toggleShowAllEvents}
+                  className="group relative px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-2xl font-semibold hover:shadow-xl hover:shadow-primary-500/30 dark:hover:shadow-primary-400/30 transition-all duration-500 hover:scale-105 hover:-translate-y-1 overflow-hidden"
+                >
+                  {/* Background Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Corner Accent */}
+                  <div className="absolute top-0 right-0 w-6 h-6 bg-gradient-to-bl from-white/30 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  
+                  {/* Floating Particles */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-2 right-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
+                  </div>
+                  
+                  <span className="relative z-10 flex items-center gap-3">
+                    <span>Daha Fazla Etkinlik</span>
+                    <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-500" />
+                  </span>
+                </button>
+              </div>
+            )}
+            
+            {/* Daha Az Butonu */}
+            {showAllEvents && (
+              <div className="flex justify-center mt-12">
+                <button
+                  onClick={toggleShowAllEvents}
+                  className="group relative px-8 py-4 bg-gradient-to-r from-neutral-500 to-neutral-600 text-white rounded-2xl font-semibold hover:shadow-xl hover:shadow-neutral-500/30 dark:hover:shadow-neutral-400/30 transition-all duration-500 hover:scale-105 hover:-translate-y-1 overflow-hidden"
+                >
+                  {/* Background Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Corner Accent */}
+                  <div className="absolute top-0 right-0 w-6 h-6 bg-gradient-to-bl from-white/30 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  
+                  {/* Floating Particles */}
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-2 right-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
+                  </div>
+                  
+                  <span className="relative z-10 flex items-center gap-3">
+                    <span>Daha Az Göster</span>
+                    <ChevronUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-500" />
+                  </span>
+                </button>
+              </div>
+            )}
           </div>
 
         {/* Education Activities Section */}
@@ -888,18 +950,18 @@ const Events = () => {
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/8 to-secondary-600/8 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 scale-110 group-hover:scale-100"></div>
-                <div className="relative bg-white/50 dark:bg-neutral-800/40 backdrop-blur-xl p-6 rounded-3xl border border-white/20 dark:border-neutral-600/20 shadow-xl hover:shadow-2xl hover:shadow-primary-500/20 dark:hover:shadow-primary-400/20 transition-all duration-700 group-hover:scale-105 group-hover:-translate-y-1 overflow-hidden">
+                <div className="relative bg-white/50 dark:bg-neutral-800/40 backdrop-blur-xl p-6 rounded-3xl border border-white/20 dark:border-neutral-600/20 shadow-xl hover:shadow-2xl hover:shadow-primary-500/20 dark:hover:shadow-primary-400/20 transition-all duration-700 group-hover:scale-105 group-hover:-translate-y-1 overflow-hidden h-48 flex flex-col justify-center">
                   {/* Glassmorphism Background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent dark:from-neutral-700/10 dark:via-neutral-700/5 dark:to-transparent rounded-3xl"></div>
                   
                   {/* Modern Corner Accent */}
                   <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl from-primary-500/20 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
                   
-                  <div className="text-center relative z-10">
+                  <div className="text-center relative z-10 flex flex-col items-center justify-center h-full">
                     <div className="w-12 h-12 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700 shadow-lg group-hover:shadow-xl border border-primary-500/30">
                       <activity.icon className="w-6 h-6 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-all duration-700" />
                     </div>
-                    <span className="text-sm text-neutral-700 dark:text-neutral-300 font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-all duration-700 bg-white/50 dark:bg-neutral-800/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/20 dark:border-neutral-700/20">
+                    <span className="text-sm text-neutral-700 dark:text-neutral-300 font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-all duration-700 bg-white/50 dark:bg-neutral-800/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 text-center">
                       {activity.name}
                     </span>
                   </div>

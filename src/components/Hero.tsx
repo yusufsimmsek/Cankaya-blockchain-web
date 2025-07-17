@@ -152,26 +152,68 @@ const Hero = () => {
           {/* Enhanced Stats */}
           <div className="w-full flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8 animate-fade-in-up delay-300 justify-items-center">
-            <div className="card-hover p-6 text-center group bg-white/10 backdrop-blur-sm border border-white/20">
-              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-white" />
+            <div className="card-hover p-6 text-center group bg-white/10 backdrop-blur-sm border border-white/20 relative overflow-hidden">
+              {/* Animated Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 bg-[length:200%_100%] animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Corner Accent */}
+              <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-white/30 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              {/* Floating Particles */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-2 right-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
               </div>
-              <div className="text-3xl font-bold text-gradient-primary">2021</div>
-              <div className="text-sm text-neutral-600 font-medium">Kuruluş Yılı</div>
+              
+              <div className="relative z-10">
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500">
+                  <TrendingUp className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div className="text-3xl font-bold text-gradient-primary group-hover:scale-110 transition-transform duration-500">2021</div>
+                <div className="text-sm text-white font-medium group-hover:scale-105 transition-transform duration-500">Kuruluş Yılı</div>
+              </div>
             </div>
-            <div className="card-hover p-6 text-center group bg-white/10 backdrop-blur-sm border border-white/20">
-              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center">
-                <Github className="w-6 h-6 text-white" />
+            <div className="card-hover p-6 text-center group bg-white/10 backdrop-blur-sm border border-white/20 relative overflow-hidden">
+              {/* Animated Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary-500 via-primary-500 to-secondary-500 bg-[length:200%_100%] animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Corner Accent */}
+              <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-white/30 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              {/* Floating Particles */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-2 right-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
               </div>
-              <div className="text-3xl font-bold text-gradient-primary">10+</div>
-              <div className="text-sm text-neutral-600 font-medium">Büyük Proje</div>
+              
+              <div className="relative z-10">
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500">
+                  <Github className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div className="text-3xl font-bold text-gradient-primary group-hover:scale-110 transition-transform duration-500">10+</div>
+                <div className="text-sm text-white font-medium group-hover:scale-105 transition-transform duration-500">Büyük Proje</div>
+              </div>
             </div>
-            <div className="card-hover p-6 text-center group bg-white/10 backdrop-blur-sm border border-white/20">
-              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-secondary-500 to-primary-500 rounded-2xl flex items-center justify-center">
-                <Users className="w-6 h-6 text-white" />
+            <div className="card-hover p-6 text-center group bg-white/10 backdrop-blur-sm border border-white/20 relative overflow-hidden">
+              {/* Animated Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 bg-[length:200%_100%] animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Corner Accent */}
+              <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-bl from-white/30 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              {/* Floating Particles */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-2 right-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
               </div>
-              <div className="text-3xl font-bold text-gradient-secondary">100+</div>
-              <div className="text-sm text-neutral-600 font-medium">Etkinlik</div>
+              
+              <div className="relative z-10">
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-secondary-500 to-primary-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500">
+                  <Users className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-500" />
+                </div>
+                <div className="text-3xl font-bold text-gradient-secondary group-hover:scale-110 transition-transform duration-500">100+</div>
+                <div className="text-sm text-white font-medium group-hover:scale-105 transition-transform duration-500">Etkinlik</div>
+              </div>
               </div>
             </div>
           </div>
@@ -180,21 +222,49 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-500">
             <a
               href="#projects"
-              className="btn-primary group shadow-glow backdrop-blur-sm"
+              className="group relative px-8 py-4 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 text-white rounded-2xl font-semibold hover:shadow-xl hover:shadow-primary-500/30 dark:hover:shadow-primary-400/30 transition-all duration-500 hover:scale-105 hover:-translate-y-1 overflow-hidden backdrop-blur-sm border border-white/20"
             >
-              <Sparkles size={16} className="mr-2 group-hover:rotate-12 transition-transform duration-200" />
+              {/* Animated Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 bg-[length:200%_100%] animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Corner Accent */}
+              <div className="absolute top-0 right-0 w-6 h-6 bg-gradient-to-bl from-white/30 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              {/* Floating Particles */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-2 right-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
+              </div>
+              
+              <span className="relative z-10 flex items-center gap-2">
+                <Sparkles size={16} className="group-hover:rotate-12 transition-transform duration-200" />
               Projelerimizi İncele
-              <ChevronDown size={16} className="ml-2 group-hover:translate-y-1 transition-transform duration-200" />
+                <ChevronDown size={16} className="group-hover:translate-y-1 transition-transform duration-200" />
+              </span>
             </a>
             <a
               href="https://github.com/cankayablockchain"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline group backdrop-blur-sm"
+              className="group relative px-8 py-4 bg-gradient-to-r from-secondary-500 via-primary-500 to-secondary-500 text-white rounded-2xl font-semibold hover:shadow-xl hover:shadow-secondary-500/30 dark:hover:shadow-secondary-400/30 transition-all duration-500 hover:scale-105 hover:-translate-y-1 overflow-hidden backdrop-blur-sm border border-white/20"
             >
-              <Github size={16} className="mr-2 group-hover:rotate-12 transition-transform duration-200" />
+              {/* Animated Gradient Background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary-500 via-primary-500 to-secondary-500 bg-[length:200%_100%] animate-gradient-x opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Corner Accent */}
+              <div className="absolute top-0 right-0 w-6 h-6 bg-gradient-to-bl from-white/30 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              
+              {/* Floating Particles */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-2 right-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute bottom-2 left-2 w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 animate-ping" style={{ animationDelay: '1s' }}></div>
+              </div>
+              
+              <span className="relative z-10 flex items-center gap-2">
+                <Github size={16} className="group-hover:rotate-12 transition-transform duration-200" />
               GitHub'da Keşfet
-              <ExternalLink size={14} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                <ExternalLink size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
+              </span>
             </a>
           </div>
 
@@ -216,16 +286,6 @@ const Hero = () => {
             >
               <Github size={20} />
             </a>
-          </div>
-        </div>
-
-        {/* Enhanced Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center space-y-2">
-            <div className="w-6 h-10 border-2 border-primary-300 rounded-full flex justify-center backdrop-blur-sm bg-white/10">
-              <div className="w-1 h-3 bg-gradient-to-b from-primary-500 to-secondary-500 rounded-full mt-2 animate-pulse"></div>
-            </div>
-            <ChevronDown size={16} className="text-primary-400 animate-pulse drop-shadow-lg" />
           </div>
         </div>
       </div>
