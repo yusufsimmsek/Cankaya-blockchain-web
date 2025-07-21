@@ -1,17 +1,41 @@
 {
   "name": "cankaya-blockchain-web",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Çankaya Üniversitesi Blockchain Topluluğu'nun resmi web sitesi",
+  "keywords": [
+    "blockchain",
+    "cryptocurrency",
+    "web3",
+    "defi",
+    "nft",
+    "çankaya",
+    "üniversite"
+  ],
+  "author": "Çankaya Blockchain Topluluğu",
+  "license": "MIT",
+  "homepage": "https://cankayablockchain.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cankayablockchain/web"
+  },
   "scripts": {
     "dev": "vite",
     "start": "vite",
     "build": "vite build",
-    "build-full": "tsc && vite build",
-    "lint": "echo 'Linting skipped for development convenience'",
-    "lint:check": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 10",
+    "build:prod": "vite build --mode production",
+    "build:staging": "vite build --mode staging",
+    "preview": "vite preview",
+    "preview:prod": "vite preview --port 4173",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --fix",
-    "preview": "vite preview"
+    "type-check": "tsc --noEmit",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist",
+    "clean": "rm -rf dist node_modules/.vite",
+    "postbuild": "echo 'Build completed successfully!'",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod"
   },
   "dependencies": {
     "framer-motion": "^10.16.4",
@@ -32,6 +56,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.4.17",
+    "terser": "^5.43.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }

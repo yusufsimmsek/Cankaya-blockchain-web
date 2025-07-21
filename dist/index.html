@@ -2,14 +2,111 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Çankaya Blockchain Topluluğu</title>
-    <script type="module" crossorigin src="/assets/index-ee75ccf8.js"></script>
-    <link rel="stylesheet" href="/assets/index-b5fb987d.css">
+    
+    <!-- Primary Meta Tags -->
+    <title>Çankaya Blockchain Topluluğu | Web3 Eğitimleri & Etkinlikler</title>
+    <meta name="title" content="Çankaya Blockchain Topluluğu | Web3 Eğitimleri & Etkinlikler" />
+    <meta name="description" content="Çankaya Üniversitesi Blockchain Topluluğu. 2021'den beri blockchain, Web3, DeFi ve NFT alanlarında eğitimler, etkinlikler ve topluluk buluşmaları düzenliyoruz." />
+    <meta name="keywords" content="blockchain, cryptocurrency, web3, defi, nft, çankaya üniversitesi, bitcoin, ethereum, solana, avalanche, eğitim, etkinlik" />
+    <meta name="author" content="Çankaya Blockchain Topluluğu" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Turkish" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cankayablockchain.com/" />
+    <meta property="og:title" content="Çankaya Blockchain Topluluğu | Web3 Eğitimleri & Etkinlikler" />
+    <meta property="og:description" content="Çankaya Üniversitesi Blockchain Topluluğu. 2021'den beri blockchain, Web3, DeFi ve NFT alanlarında eğitimler, etkinlikler ve topluluk buluşmaları düzenliyoruz." />
+    <meta property="og:image" content="https://cankayablockchain.com/og-image.jpg" />
+    <meta property="og:site_name" content="Çankaya Blockchain" />
+    <meta property="og:locale" content="tr_TR" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://cankayablockchain.com/" />
+    <meta property="twitter:title" content="Çankaya Blockchain Topluluğu | Web3 Eğitimleri & Etkinlikler" />
+    <meta property="twitter:description" content="Çankaya Üniversitesi Blockchain Topluluğu. 2021'den beri blockchain, Web3, DeFi ve NFT alanlarında eğitimler, etkinlikler ve topluluk buluşmaları düzenliyoruz." />
+    <meta property="twitter:image" content="https://cankayablockchain.com/og-image.jpg" />
+    <meta property="twitter:site" content="@cankayachain" />
+    <meta property="twitter:creator" content="@cankayachain" />
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <!-- Preconnect to External Domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//twitter.com" />
+    <link rel="dns-prefetch" href="//instagram.com" />
+    <link rel="dns-prefetch" href="//linkedin.com" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cankayablockchain.com/" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Çankaya Blockchain Topluluğu",
+      "alternateName": "Çankaya Blockchain",
+      "url": "https://cankayablockchain.com",
+      "logo": "https://cankayablockchain.com/logo.png",
+      "description": "Çankaya Üniversitesi Blockchain Topluluğu. 2021'den beri blockchain, Web3, DeFi ve NFT alanlarında eğitimler, etkinlikler ve topluluk buluşmaları düzenliyoruz.",
+      "foundingDate": "2021",
+      "sameAs": [
+        "https://twitter.com/cankayachain",
+        "https://instagram.com/cankayablockchain",
+        "https://linkedin.com/company/cankayablockchain"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ankara",
+        "addressCountry": "TR"
+      }
+    }
+    </script>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
+    <!-- Performance Hints -->
+    <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0Jw0KaW1wb3J0IFJlYWN0RE9NIGZyb20gJ3JlYWN0LWRvbS9jbGllbnQnDQppbXBvcnQgQXBwIGZyb20gJy4vQXBwLnRzeCcNCmltcG9ydCBFcnJvckJvdW5kYXJ5IGZyb20gJy4vY29tcG9uZW50cy9FcnJvckJvdW5kYXJ5LnRzeCcNCmltcG9ydCAnLi9pbmRleC5jc3MnDQoNCi8vIFR5cGUgZGVjbGFyYXRpb24gZm9yIEdvb2dsZSBBbmFseXRpY3MNCmRlY2xhcmUgZ2xvYmFsIHsNCiAgaW50ZXJmYWNlIFdpbmRvdyB7DQogICAgZGF0YUxheWVyOiBhbnlbXQ0KICAgIGd0YWc6ICguLi5hcmdzOiBhbnlbXSkgPT4gdm9pZA0KICB9DQp9DQoNCi8vIFBlcmZvcm1hbmNlIG1vbml0b3JpbmcNCmlmIChpbXBvcnQubWV0YS5lbnYuUFJPRCkgew0KICAvLyBHb29nbGUgQW5hbHl0aWNzIGluaXRpYWxpemF0aW9uDQogIGlmIChpbXBvcnQubWV0YS5lbnYuVklURV9HQV9UUkFDS0lOR19JRCkgew0KICAgIGNvbnN0IHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpDQogICAgc2NyaXB0LmFzeW5jID0gdHJ1ZQ0KICAgIHNjcmlwdC5zcmMgPSBgaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD0ke2ltcG9ydC5tZXRhLmVudi5WSVRFX0dBX1RSQUNLSU5HX0lEfWANCiAgICBkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKHNjcmlwdCkNCg0KICAgIHdpbmRvdy5kYXRhTGF5ZXIgPSB3aW5kb3cuZGF0YUxheWVyIHx8IFtdDQogICAgd2luZG93Lmd0YWcgPSBmdW5jdGlvbiguLi5hcmdzOiBhbnlbXSkgew0KICAgICAgd2luZG93LmRhdGFMYXllci5wdXNoKGFyZ3MpDQogICAgfQ0KICAgIHdpbmRvdy5ndGFnKCdqcycsIG5ldyBEYXRlKCkpDQogICAgd2luZG93Lmd0YWcoJ2NvbmZpZycsIGltcG9ydC5tZXRhLmVudi5WSVRFX0dBX1RSQUNLSU5HX0lEKQ0KICB9DQp9DQoNCi8vIFNlcnZpY2UgV29ya2VyIFJlZ2lzdHJhdGlvbg0KaWYgKCdzZXJ2aWNlV29ya2VyJyBpbiBuYXZpZ2F0b3IgJiYgaW1wb3J0Lm1ldGEuZW52LlBST0QgJiYgaW1wb3J0Lm1ldGEuZW52LlZJVEVfRU5BQkxFX1NFUlZJQ0VfV09SS0VSID09PSAndHJ1ZScpIHsNCiAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2xvYWQnLCAoKSA9PiB7DQogICAgbmF2aWdhdG9yLnNlcnZpY2VXb3JrZXIucmVnaXN0ZXIoJy9zdy5qcycpDQogICAgICAudGhlbigocmVnaXN0cmF0aW9uKSA9PiB7DQogICAgICAgIGNvbnNvbGUubG9nKCdTVyByZWdpc3RlcmVkOiAnLCByZWdpc3RyYXRpb24pDQogICAgICB9KQ0KICAgICAgLmNhdGNoKChyZWdpc3RyYXRpb25FcnJvcikgPT4gew0KICAgICAgICBjb25zb2xlLmxvZygnU1cgcmVnaXN0cmF0aW9uIGZhaWxlZDogJywgcmVnaXN0cmF0aW9uRXJyb3IpDQogICAgICB9KQ0KICB9KQ0KfQ0KDQpSZWFjdERPTS5jcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JykhKS5yZW5kZXIoDQogIDxSZWFjdC5TdHJpY3RNb2RlPg0KICAgIDxFcnJvckJvdW5kYXJ5Pg0KICAgICAgPEFwcCAvPg0KICAgIDwvRXJyb3JCb3VuZGFyeT4NCiAgPC9SZWFjdC5TdHJpY3RNb2RlPiwNCikg" as="script" />
+    <link rel="prefetch" href="/og-image.jpg" />
+    <script type="module" crossorigin src="/assets/js/index-9989ea0d.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/js/react-324528e4.js">
+    <link rel="modulepreload" crossorigin href="/assets/js/lucide-12578d2b.js">
+    <link rel="stylesheet" href="/assets/css/index-397ea052.css">
   </head>
   <body>
     <div id="root"></div>
     
+    
+    <!-- No Script Fallback -->
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>JavaScript Gerekli</h1>
+        <p>Bu web sitesini görüntülemek için JavaScript'i etkinleştirmeniz gerekiyor.</p>
+        <p>Lütfen tarayıcınızın ayarlarından JavaScript'i etkinleştirin ve sayfayı yenileyin.</p>
+      </div>
+    </noscript>
   </body>
 </html> 
