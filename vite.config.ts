@@ -6,6 +6,7 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/', // Deployment için base URL ayarı
   
   // Development server configuration
   server: {
