@@ -1,0 +1,54 @@
+# Robots.txt for Çankaya Blockchain Topluluğu
+# Website: https://cankayablockchain.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://cankayablockchain.com/sitemap.xml
+
+# Specific rules for bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block access to sensitive areas (if any in future)
+# Disallow: /admin/
+# Disallow: /api/
+# Disallow: /.env*
+# Disallow: /config/
+
+# Allow access to assets
+Allow: /assets/
+Allow: /images/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.ico
+
+# Security note
+# Please respect our terms of service and robots.txt guidelines
+# Contact: info@cankayablockchain.com 
