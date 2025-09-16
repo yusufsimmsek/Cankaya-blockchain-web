@@ -146,10 +146,10 @@ const Footer = () => {
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-3 text-primary-400" />
                   <a 
-                    href="mailto:info@cankyablockchain.com"
+                    href="mailto:info@cankayablockchain"
                     className="text-sm text-primary-400 hover:text-primary-300 transition-colors duration-200"
                   >
-                    info@cankyablockchain.com
+                    info@cankayablockchain
                   </a>
                 </div>
               </div>

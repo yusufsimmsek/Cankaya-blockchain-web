@@ -158,7 +158,7 @@ const Contact = () => {
 
             {/* Email Card */}
             <a 
-              href="mailto:info@cankyablockchain.com"
+              href="mailto:info@cankayablockchain"
               className="relative group block"
             >
                   <div className="absolute inset-0 bg-gradient-to-r from-secondary-50 to-primary-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -168,7 +168,7 @@ const Contact = () => {
                     </div>
                 <div className="flex flex-col justify-center">
                   <h4 className="text-lg font-semibold text-neutral-900 mb-2 dark:text-neutral-100">{t('email')}</h4>
-                  <p className="text-neutral-600 dark:text-neutral-200 text-base">info@cankyablockchain.com</p>
+                  <p className="text-neutral-600 dark:text-neutral-200 text-base">info@cankayablockchain</p>
                   <p className="text-sm text-primary-600 dark:text-primary-400 mt-1">{t('click_to_email')}</p>
                 </div>
               </div>
