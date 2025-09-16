@@ -18,7 +18,7 @@ export default defineConfig({
   // Build configuration for production
   build: {
     target: 'es2015',
-    outDir: 'dist',
+    outDir: 'docs',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'esbuild',
