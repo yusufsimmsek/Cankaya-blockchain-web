@@ -1,7 +1,7 @@
 // Service Worker for Çankaya Blockchain Web
-// Version 1.0.0
+// Version 1.0.2
 
-const CACHE_NAME = 'cankaya-blockchain-v1.0.0'
+const CACHE_NAME = 'cankaya-blockchain-v1.0.2'
 const urlsToCache = [
   '/',
   '/index.html',
