@@ -141,11 +141,11 @@ const Hero = () => {
           {/* Badge kısmı kaldırıldı */}
 
           <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100 leading-tight pt-6 pb-3 animate-fade-in-up delay-100 drop-shadow-lg py-3 whitespace-nowrap mx-auto">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100 leading-snug pt-6 pb-3 animate-fade-in-up delay-100 drop-shadow-lg py-3 break-words mx-auto max-w-[90vw]">
               <span className="text-gradient-primary">{t('hero_title_1')}</span>
               <span className="text-gradient-secondary">{t('hero_title_2')}</span>
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-neutral-700 dark:text-neutral-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200 drop-shadow-md">{t('hero_desc')}</p>
+            <p className="text-base sm:text-xl lg:text-2xl text-neutral-700 dark:text-neutral-300 max-w-3xl sm:max-w-4xl mx-auto px-2 leading-relaxed animate-fade-in-up delay-200 drop-shadow-md">{t('hero_desc')}</p>
           </div>
 
           {/* Enhanced Stats */}
