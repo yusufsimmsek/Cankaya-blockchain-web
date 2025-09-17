@@ -141,7 +141,7 @@ const Hero = () => {
           {/* Badge kısmı kaldırıldı */}
 
           <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-neutral-900 dark:text-neutral-100 leading-[1.25] sm:leading-[1.18] lg:leading-[1.15] pt-8 pb-4 animate-fade-in-up delay-100 drop-shadow-lg py-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100 leading-tight pt-6 pb-3 animate-fade-in-up delay-100 drop-shadow-lg py-3 whitespace-nowrap mx-auto">
               <span className="text-gradient-primary">{t('hero_title_1')}</span>
               <span className="text-gradient-secondary">{t('hero_title_2')}</span>
             </h1>
