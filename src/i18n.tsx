@@ -11,7 +11,7 @@ const translations: Translations = {
   nav_projects: { tr: 'Projeler', en: 'Projects' },
   nav_contact: { tr: 'İletişim', en: 'Contact' },
   hero_title_1: { tr: 'Çankaya ', en: 'Cankaya ' },
-  hero_title_2: { tr: 'Blockchain Topluluğu', en: 'Blockchain Community' },
+  hero_title_2: { tr: 'Blockchain Topluluğu & Labs', en: 'Blockchain Community & Labs' },
   hero_desc: { tr: "Çankaya Blockchain Topluluğu - 2021'den bu yana Ankara'da blockchain teknolojilerini öğreten, projeler geliştiren ve ekosisteme nitelikli bireyler kazandıran lider topluluğuz.", en: "Cankaya Blockchain Community - Since 2021 in Ankara, we teach blockchain technologies, build projects, and contribute qualified individuals to the ecosystem." },
   hero_stat_foundation: { tr: 'Kuruluş Yılı', en: 'Founded' },
   hero_stat_projects: { tr: 'Büyük Proje', en: 'Major Projects' },
