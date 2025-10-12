@@ -23,7 +23,7 @@
     <meta property="og:url" content="https://cankayablockchain.com/" />
     <meta property="og:title" content="Cankaya Blockchain Community & Labs" />
     <meta property="og:description" content="Çankaya Blockchain Topluluğu - Çankaya Üniversitesi'nin resmi blockchain topluluğu. 2021'den beri blockchain, Web3, DeFi ve NFT eğitimleri, etkinlikleri ve projeleri. Ankara'nın en aktif blockchain topluluğu." />
-    <meta property="og:image" content="https://cankayablockchain.com/android-chrome-512x512.png?v=20250917-2" />
+    <meta property="og:image" content="https://cankayablockchain.com/og-image.jpg?v=20250917-2" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Cankaya Blockchain" />
@@ -35,7 +35,7 @@
     <meta property="twitter:url" content="https://cankayablockchain.com/" />
     <meta property="twitter:title" content="Cankaya Blockchain Community & Labs" />
     <meta property="twitter:description" content="Çankaya Blockchain Topluluğu - Çankaya Üniversitesi'nin resmi blockchain topluluğu. 2021'den beri blockchain, Web3, DeFi ve NFT eğitimleri, etkinlikleri ve projeleri." />
-    <meta property="twitter:image" content="https://cankayablockchain.com/android-chrome-512x512.png" />
+    <meta property="twitter:image" content="https://cankayablockchain.com/og-image.jpg" />
     <meta property="twitter:site" content="@cankayachain" />
     <meta property="twitter:creator" content="@cankayachain" />
     
@@ -119,10 +119,13 @@
     
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     
     <!-- Performance Hints -->
+    <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0Jw0KaW1wb3J0IFJlYWN0RE9NIGZyb20gJ3JlYWN0LWRvbS9jbGllbnQnDQppbXBvcnQgQXBwIGZyb20gJy4vQXBwLnRzeCcNCmltcG9ydCBFcnJvckJvdW5kYXJ5IGZyb20gJy4vY29tcG9uZW50cy9FcnJvckJvdW5kYXJ5LnRzeCcNCmltcG9ydCAnLi9pbmRleC5jc3MnDQoNCi8vIFR5cGUgZGVjbGFyYXRpb24gZm9yIEdvb2dsZSBBbmFseXRpY3MNCmRlY2xhcmUgZ2xvYmFsIHsNCiAgaW50ZXJmYWNlIFdpbmRvdyB7DQogICAgZGF0YUxheWVyOiBhbnlbXQ0KICAgIGd0YWc6ICguLi5hcmdzOiBhbnlbXSkgPT4gdm9pZA0KICB9DQp9DQoNCi8vIFBlcmZvcm1hbmNlIG1vbml0b3JpbmcNCmlmIChpbXBvcnQubWV0YS5lbnYuUFJPRCkgew0KICAvLyBHb29nbGUgQW5hbHl0aWNzIGluaXRpYWxpemF0aW9uDQogIGlmIChpbXBvcnQubWV0YS5lbnYuVklURV9HQV9UUkFDS0lOR19JRCkgew0KICAgIGNvbnN0IHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpDQogICAgc2NyaXB0LmFzeW5jID0gdHJ1ZQ0KICAgIHNjcmlwdC5zcmMgPSBgaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD0ke2ltcG9ydC5tZXRhLmVudi5WSVRFX0dBX1RSQUNLSU5HX0lEfWANCiAgICBkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKHNjcmlwdCkNCg0KICAgIHdpbmRvdy5kYXRhTGF5ZXIgPSB3aW5kb3cuZGF0YUxheWVyIHx8IFtdDQogICAgd2luZG93Lmd0YWcgPSBmdW5jdGlvbiguLi5hcmdzOiBhbnlbXSkgew0KICAgICAgd2luZG93LmRhdGFMYXllci5wdXNoKGFyZ3MpDQogICAgfQ0KICAgIHdpbmRvdy5ndGFnKCdqcycsIG5ldyBEYXRlKCkpDQogICAgd2luZG93Lmd0YWcoJ2NvbmZpZycsIGltcG9ydC5tZXRhLmVudi5WSVRFX0dBX1RSQUNLSU5HX0lEKQ0KICB9DQp9DQoNCi8vIFNlcnZpY2UgV29ya2VyIFJlZ2lzdHJhdGlvbg0KaWYgKCdzZXJ2aWNlV29ya2VyJyBpbiBuYXZpZ2F0b3IgJiYgaW1wb3J0Lm1ldGEuZW52LlBST0QgJiYgaW1wb3J0Lm1ldGEuZW52LlZJVEVfRU5BQkxFX1NFUlZJQ0VfV09SS0VSID09PSAndHJ1ZScpIHsNCiAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2xvYWQnLCAoKSA9PiB7DQogICAgbmF2aWdhdG9yLnNlcnZpY2VXb3JrZXIucmVnaXN0ZXIoJy9zdy5qcycpDQogICAgICAudGhlbigocmVnaXN0cmF0aW9uKSA9PiB7DQogICAgICAgIGNvbnNvbGUubG9nKCdTVyByZWdpc3RlcmVkOiAnLCByZWdpc3RyYXRpb24pDQogICAgICB9KQ0KICAgICAgLmNhdGNoKChyZWdpc3RyYXRpb25FcnJvcikgPT4gew0KICAgICAgICBjb25zb2xlLmxvZygnU1cgcmVnaXN0cmF0aW9uIGZhaWxlZDogJywgcmVnaXN0cmF0aW9uRXJyb3IpDQogICAgICB9KQ0KICB9KQ0KfQ0KDQpSZWFjdERPTS5jcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JykhKS5yZW5kZXIoDQogIDxSZWFjdC5TdHJpY3RNb2RlPg0KICAgIDxFcnJvckJvdW5kYXJ5Pg0KICAgICAgPEFwcCAvPg0KICAgIDwvRXJyb3JCb3VuZGFyeT4NCiAgPC9SZWFjdC5TdHJpY3RNb2RlPiwNCikg" as="script" />
+    <link rel="prefetch" href="/og-image.jpg" />
 
     <!-- Google Translate (hidden) -->
     <style>
@@ -145,7 +148,7 @@
 
       // Helper: programmatically trigger Google Translate select if available
       function triggerTranslate(lang) {
-        var target = (typeof lang === 'string' ? lang : 'tr').toLowerCase();
+        var target = (lang || 'tr').toLowerCase();
         var attempt = 0;
         var maxAttempts = 40; // ~4s
         var timer = setInterval(function() {
@@ -167,7 +170,7 @@
       window.setSiteLanguage = function(lang) {
         try {
           var from = 'tr';
-          var to = (typeof lang === 'string' ? lang : 'tr').toLowerCase();
+          var to = (lang || 'tr').toLowerCase();
 
           // Clear cookie for resetting to TR
           var expirePast = 'Thu, 01 Jan 1970 00:00:00 UTC';
@@ -215,10 +218,10 @@
       })();
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script type="module" crossorigin src="/assets/js/index-9c903193.js"></script>
+    <script type="module" crossorigin src="/assets/js/index-b6943c75.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/js/react-3371026b.js">
     <link rel="modulepreload" crossorigin href="/assets/js/lucide-918d4d2c.js">
-    <link rel="stylesheet" href="/assets/css/index-9229f358.css">
+    <link rel="stylesheet" href="/assets/css/index-6448c027.css">
   </head>
   <body>
     <div id="root"></div>
